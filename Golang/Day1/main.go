@@ -16,5 +16,32 @@ func main() {
 	const p = 100;
     fmt.Println(p)
 
+	// if....else and switch
+    
+	age := 10
+	sex := "female"
+
+	if age >= 18 && sex == "male"{
+		fmt.Println("university male Student")
+	} else if age < 18 && sex == "female"{
+		fmt.Println("Hi school female Student")
+	} else {
+		fmt.Println("kintergarden Student")
+	}
+
+	num := 5
+
+	switch num{
+	case 1: {
+		fmt.Println("one")
+	}	
+	case 2: {
+		fmt.Println("two")
+	}
+	default : {
+		fmt.Println("more then 2")
+	}	
+	}
+
 
 }
