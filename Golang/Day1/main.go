@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+func add(n1 int, n2 int) {
+	sum := n1 + n2
+	fmt.Println(sum)
+}
+
 func main() {
 
 	fmt.Println("hello world!")
@@ -43,5 +48,10 @@ func main() {
 	}	
 	}
 
+	// functions
+	x := 10
+	y := 20
+
+	add(x, y)
 
 }
