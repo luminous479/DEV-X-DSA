@@ -6,6 +6,14 @@ func add(n1 int, n2 int) {
 	sum := n1 + n2
 	fmt.Println(sum)
 }
+func calculator(num1 int, num2 int) (int, int){
+
+	sum := num1 + num2
+	mul := num1 * num2
+
+	return sum, mul
+
+}
 
 func main() {
 
@@ -53,5 +61,10 @@ func main() {
 	y := 20
 
 	add(x, y)
+   // function with return values and types
 
+   s,m := calculator(5,7)
+
+   fmt.Println(s)
+   fmt.Println(m)
 }
