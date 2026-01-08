@@ -8,8 +8,8 @@ import (
 
 func Add(x int, y int){  // block
 
-	sum := x +y
+	sum := x +y // local
 
-    expcom.PrintNumber(sum)
+    expcom.PrintNumber(sum) // called from package scope
 
 }
