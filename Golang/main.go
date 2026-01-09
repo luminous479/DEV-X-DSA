@@ -20,6 +20,11 @@ func main() {
 	}
 	fmt.Println(p)
 	fmt.Println("this is main value",i)
+
+	// anonymous function and IIFE
+	func(a string){
+		fmt.Println("This is ", a ," function ")
+	}("anonymous")
 }
 
 func init(){
