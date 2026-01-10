@@ -25,6 +25,14 @@ func main() {
 	func(a string){
 		fmt.Println("This is ", a ," function ")
 	}("anonymous")
+
+	// a noob function with expression
+
+	txt := func ( n string){
+       
+		fmt.Println("THis is a noob ",n) 
+	}
+	txt("function")
 }
 
 func init(){
