@@ -1,7 +1,10 @@
 package main
-import  (
- day2 "github.com/luminous479/DEV-X-DSA/Day2"
- "fmt"
+
+import (
+	"fmt"
+
+	day2 "github.com/luminous479/DEV-X-DSA/Day2"
+	day3 "github.com/luminous479/DEV-X-DSA/Day3"
 )
 var (
 	a = 10 // global
@@ -28,11 +31,14 @@ func main() {
 
 	// a noob function with expression
 
-	txt := func ( n string){
+	txt := func ( n string){ // parameter 
        
 		fmt.Println("THis is a noob ",n) 
 	}
-	txt("function")
+	txt("function") // argument
+   day3.OperationProcess(30,day3.PrintElement)
+
+	
 }
 
 func init(){
