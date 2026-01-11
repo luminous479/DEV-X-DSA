@@ -38,11 +38,30 @@ func main() {
 	}
 	txt("function") // argument
    day3.OperationProcess(30,day3.PrintElement)
-   //
+   
+   // day 4 : closure , struct, receiver function 
       incre1 := day4.Outer()
-	  fmt.Println(incre1)
-	  fmt.Println(incre1)
+	  fmt.Println(incre1())
+	  fmt.Println(incre1())
 
+     person1 := day4.Person{
+		Name : "Jhon",
+		Age :  30,
+	 }
+	 user1 :=  day4.Person{
+	Name : "Tina",
+	Age : 20,
+   }
+   user2 :=  day4.Person{
+	Name : "Hina",
+	Age : 21,
+   }
+	 fmt.Println(person1)
+
+	 day4.PrintUserDetails(user1)
+	 
+	 isPrinted := user2.PrintPersonDetails("=====Person Details=======")
+	 fmt.Println(isPrinted)
 	
 }
 
