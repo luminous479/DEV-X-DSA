@@ -77,9 +77,22 @@ func main() {
 		{3,4},
 	 }
 	 fmt.Println(twoD)
+	 //pointer
+	 x := 20
+	 fmt.Println(x)
+	 p := &x
+	 *p = 30
+	 fmt.Println(*p)
+
+	  num := [3]int{1,2,3}
+ 
+	  printnum(&num)
 
 
 }
+func printnum(num *[3]int){
+        fmt.Print(num)
+	  }
 
 func init(){
 	fmt.Println("this is init value",i)
