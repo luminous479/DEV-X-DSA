@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-
 	day2 "github.com/luminous479/DEV-X-DSA/Day2"
 	day3 "github.com/luminous479/DEV-X-DSA/Day3"
 	day4 "github.com/luminous479/DEV-X-DSA/Day4"
@@ -11,6 +10,7 @@ var (
 	a = 10 // global
 	b = 20 // global
 )
+
 var p = 10
 var i = 5
 func main() {
@@ -59,10 +59,26 @@ func main() {
 	 fmt.Println(person1)
 
 	 day4.PrintUserDetails(user1)
-	 
+	 // calling receiver function
 	 isPrinted := user2.PrintPersonDetails("=====Person Details=======")
 	 fmt.Println(isPrinted)
-	
+
+	 // array 
+	 arr := [5]int{1, 2, 3, 4, 5} // Short declaration with initial values
+	 fmt.Println(arr)
+	var arr1 [3]int
+	 arr1[0] = 3
+	 arr1[1] = 5
+	 fmt.Println(arr1)
+	 var twoD [2][2]int
+
+	 twoD = [2][2]int{
+		{1,2},
+		{3,4},
+	 }
+	 fmt.Println(twoD)
+
+
 }
 
 func init(){
