@@ -5,6 +5,7 @@ import (
 
 	day2 "github.com/luminous479/DEV-X-DSA/Day2"
 	day3 "github.com/luminous479/DEV-X-DSA/Day3"
+	day4 "github.com/luminous479/DEV-X-DSA/Day4"
 )
 var (
 	a = 10 // global
@@ -37,6 +38,10 @@ func main() {
 	}
 	txt("function") // argument
    day3.OperationProcess(30,day3.PrintElement)
+   //
+      incre1 := day4.Outer()
+	  fmt.Println(incre1)
+	  fmt.Println(incre1)
 
 	
 }
