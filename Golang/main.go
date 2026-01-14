@@ -114,6 +114,30 @@ func main() {
 	fmt.Println(slice,"cap : ",cap(slice),"len : ",len(slice))
 
 
+	// map
+
+	m := make(map[string]int)
+
+	m["key1"] = 20
+	m["Key2"] = 30
+	m["Key3"] = 40
+
+	fmt.Println(m)
+
+	delete(m,"key3")
+
+	fmt.Println(m)
+
+  _, ok := m["key4"]
+  fmt.Println(ok)
+
+    n := map[string]int{"foo": 1, "bar": 2}
+    fmt.Println("map:", n)
+
+
+
+
+
 }
       func printnum(num *[3]int){
         fmt.Print(num)
