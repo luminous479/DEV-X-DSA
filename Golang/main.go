@@ -39,7 +39,7 @@ func main() {
 	txt("function") // argument
    day3.OperationProcess(30,day3.PrintElement)
    
-   // day 4 : closure , struct, receiver function 
+   // day 4 : closure , struct, receiver function , array and pointer 
       incre1 := day4.Outer()
 	  fmt.Println(incre1())
 	  fmt.Println(incre1())
@@ -85,12 +85,37 @@ func main() {
 	 fmt.Println(*p)
 
 	  num := [3]int{1,2,3}
- 
-	  printnum(&num)
+      printnum(&num)
+      fmt.Println()
+
+	  // slice 
+
+	  array := [7]int{4,6,7,8,3,2,9}
+
+	  slice := array[1:5]
+
+	  fmt.Println("slice : ",slice, "cap : ",cap(slice)) // slice from array
+
+    slice2 := slice[2:4] // slice from slice
+	fmt.Println(slice2, "cap", cap(slice2)) 
+
+	var sli []int // empty slice
+	fmt.Println(sli) 
+    
+	slis := make([]int, 3) // slice using make function with len
+	fmt.Println(slis,"cap",cap(slis),"len",len(slis))
+	sli2 := make([]int, 3,5) // slice using make function with len and cap
+	fmt.Println(sli2,"cap",cap(sli2),"len",len(sli2))
+
+	// insert 
+    fmt.Println(slice,"cap : ",cap(slice),"len : ",len(slice))
+	slice = append(slice, 1)
+	slice = append(slice, 2)
+	fmt.Println(slice,"cap : ",cap(slice),"len : ",len(slice))
 
 
 }
-func printnum(num *[3]int){
+      func printnum(num *[3]int){
         fmt.Print(num)
 	  }
 

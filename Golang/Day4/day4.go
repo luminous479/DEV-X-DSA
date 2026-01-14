@@ -1,11 +1,8 @@
 package day4
-
 import "fmt"
 //closure
 func Outer() func() int {
-
 	var count = 0
-
 	return func() int {
 		count++
 		return count
@@ -16,7 +13,6 @@ type Person struct {
 	Name string
 	Age  int
 }
-
 func PrintUserDetails(user Person) {
 	fmt.Println("Name : ", user.Name)
 	fmt.Println("Age : ",user.Age )
