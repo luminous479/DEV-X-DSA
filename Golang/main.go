@@ -134,11 +134,43 @@ func main() {
     n := map[string]int{"foo": 1, "bar": 2}
     fmt.Println("map:", n)
 
-
-
-
-
+	// defer
+	fmt.Println("After returning : ",calculator(5))
+   fmt.Println("After returning : ",cal(5))
 }
+     // named return value and defer
+     func calculator(x int) (result int){
+
+		result = 0
+		fmt.Println("before :",result)
+
+		show := func ()  {
+			result += 10;
+
+		}
+		defer show()
+		result += x
+		fmt.Println("After : ",result)
+		return
+	}
+	 // without named retur value
+	  func cal(x int) int{
+
+		result := 0
+		fmt.Println("before :",result)
+
+		show := func ()  {
+			result += 10;
+
+		}
+		defer show()
+		result += x
+		fmt.Println("After : ",result)
+		return result
+	}
+
+
+
       func printnum(num *[3]int){
         fmt.Print(num)
 	  }
