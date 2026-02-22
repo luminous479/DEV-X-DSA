@@ -15,3 +15,12 @@ print(pi)
 # Boolean
 is_sunny = True
 print(is_sunny)
+# type casting
+number_str = "100"
+number_int = int(number_str)
+print(number_int + 50)  # Output: 150   
+# print sum of two numbers
+num1 = input("Enter first number: ")
+num2 = input("Enter second number: ")
+
+print("The sum is:", int(num1) + int(num2))
