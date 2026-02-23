@@ -14,9 +14,9 @@ print(name.split("i"))  # Output: ['Al', 'ce']
 print(name.startswith("A"))  # Output: True
 print(name.endswith("e"))  # Output: True
 #slice
-print(name[1:4])  # Output: lice
-print(name[:4])  # Output: Alic
-print(name[1:])  # Output: lice
+print(name[1:4])  # Output: ob
+print(name[:4])  # Output: Bob
+print(name[1:])  # Output: ob
 
 #Conditional statement
 age = 51
@@ -24,9 +24,9 @@ if(age >= 18 and age<=39):
     print("can drive")
     print("Valid")
 elif(age>= 40):
-    print("Hire a driver")
     if(age>= 50):
         print("Must hire a driver")
+    print("can hire a driver")
 else:
     print("Not valid")
 
