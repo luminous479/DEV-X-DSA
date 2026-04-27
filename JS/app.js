@@ -15,3 +15,17 @@ const greenButton = document.getElementById('green-btn');
 greenButton.addEventListener('click', function() {
     document.body.style.backgroundColor = 'lightgreen';
 });
+
+const dtextButton = document.getElementById('dtext-btn');
+dtextButton.addEventListener('click', function() {
+    const dtext = document.getElementById('dtext');
+    dtext.textContent = 'Text has been changed!';
+});
+
+const inputButton = document.getElementById('input-btn');
+inputButton.addEventListener('click', function() {
+    const inputText = document.getElementById('input-text');
+    const dtext = document.getElementById('dtext');
+    dtext.textContent = inputText.value
+    inputText.value = '';
+});
