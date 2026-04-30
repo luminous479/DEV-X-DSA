@@ -65,18 +65,31 @@
 // deleteButton.addEventListener('click', function() {    text.style.display = 'none';
 // });
 
-document.getElementsByClassName("li-container")[0].addEventListener('click',function(){
-     console.log("container is clicked");
-});
+// document.getElementsByClassName("li-container")[0].addEventListener('click',function(){
+//      console.log("container is clicked");
+// });
 
-document.getElementById("ul-list").addEventListener('click',function(event){
-     console.log("ul-list is clicked");
-});
-document.getElementById("item-1").addEventListener('click',function(event){
-     console.log("item-1 is clicked");
-});
+// document.getElementById("ul-list").addEventListener('click',function(event){
+//      console.log("ul-list is clicked");
+// });
+// document.getElementById("item-1").addEventListener('click',function(event){
+//      console.log("item-1 is clicked");
+// });
 
-document.getElementById("item-2").addEventListener('click',function(event){
-     console.log("item-2 is clicked");
-     event.stopPropagation();
+// document.getElementById("item-2").addEventListener('click',function(event){
+//      console.log("item-2 is clicked");
+//      event.stopPropagation();
+// });
+ const ulList = document.getElementById("ul-list");
+
+ ulList.addEventListener('click',function(event){
+    event.target.parentNode.removeChild(event.target);
+ });
+
+ document.getElementById("add-item").addEventListener('click',function(event){
+   
+    const newItem = document.createElement('li');
+    newItem.textContent = 'New Item';
+    newItem.classList.add('item');
+    ulList.appendChild(newItem); 
 });
