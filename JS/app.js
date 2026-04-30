@@ -32,17 +32,35 @@
 
 
 
-const cmntContainer = document.getElementById('comment-container');
+// const cmntContainer = document.getElementById('comment-container');
 
-const commentInput = document.getElementById('comment-input');
-const submitButton = document.getElementById('submit-btn');
+// const commentInput = document.getElementById('comment-input');
+// const submitButton = document.getElementById('submit-btn');
 
-submitButton.addEventListener('click', function() {
-    const commentText = commentInput.value.trim();
-    if (commentText !== '') {
-        const commentElement = document.createElement('p');
-        commentElement.textContent = commentText;
-        cmntContainer.appendChild(commentElement);
-        commentInput.value = '';
+// submitButton.addEventListener('click', function() {
+//     const commentText = commentInput.value.trim();
+//     if (commentText !== '') {
+//         const commentElement = document.createElement('p');
+//         commentElement.textContent = commentText;
+//         cmntContainer.appendChild(commentElement);
+//         commentInput.value = '';
+//     }
+// });
+
+const inputText = document.getElementById('delete-input');
+const deleteButton = document.getElementById('btnDelete');
+const text = document.getElementById('Text');
+
+
+inputText.addEventListener('keyup', function(event) {
+    const value = event.target.value.trim().toLowerCase();
+    if(value === 'delete') 
+        deleteButton.removeAttribute('disabled');
+    else {
+        deleteButton.setAttribute('disabled', true);
+        alert('Please enter "delete" to enable the button.');
     }
+
+});
+deleteButton.addEventListener('click', function() {    text.style.display = 'none';
 });
