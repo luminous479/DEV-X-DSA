@@ -47,20 +47,36 @@
 //     }
 // });
 
-const inputText = document.getElementById('delete-input');
-const deleteButton = document.getElementById('btnDelete');
-const text = document.getElementById('Text');
+// const inputText = document.getElementById('delete-input');
+// const deleteButton = document.getElementById('btnDelete');
+// const text = document.getElementById('Text');
 
 
-inputText.addEventListener('keyup', function(event) {
-    const value = event.target.value.trim().toLowerCase();
-    if(value === 'delete') 
-        deleteButton.removeAttribute('disabled');
-    else {
-        deleteButton.setAttribute('disabled', true);
-        alert('Please enter "delete" to enable the button.');
-    }
+// inputText.addEventListener('keyup', function(event) {
+//     const value = event.target.value.trim().toLowerCase();
+//     if(value === 'delete') 
+//         deleteButton.removeAttribute('disabled');
+//     else {
+//         deleteButton.setAttribute('disabled', true);
+//         alert('Please enter "delete" to enable the button.');
+//     }
 
+// });
+// deleteButton.addEventListener('click', function() {    text.style.display = 'none';
+// });
+
+document.getElementsByClassName("li-container")[0].addEventListener('click',function(){
+     console.log("container is clicked");
 });
-deleteButton.addEventListener('click', function() {    text.style.display = 'none';
+
+document.getElementById("ul-list").addEventListener('click',function(event){
+     console.log("ul-list is clicked");
+});
+document.getElementById("item-1").addEventListener('click',function(event){
+     console.log("item-1 is clicked");
+});
+
+document.getElementById("item-2").addEventListener('click',function(event){
+     console.log("item-2 is clicked");
+     event.stopPropagation();
 });
